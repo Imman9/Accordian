@@ -1,0 +1,82 @@
+/* Wrapper to center and style the accordion container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper button {
+    padding: 10px 20px;
+    background: #0c50ae;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Accordion container styling */
+.accordian {
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #dddddd1c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each accordion item */
+.item {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Title section styling */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0c50ae;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on title */
+.title:hover {
+    background-color: #4d8ece;
+}
+
+/* Styling for the content */
+.content {
+    padding: 15px 20px;
+    background-color: #0c50ae;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: white;
+    transition: max-height 0.3s ease;
+}
+
+/* H3 styling for question titles */
+.title h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Span to represent "+" and toggle open/close icon */
+.title span {
+    font-size: 1.5rem;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the "+" icon when the item is selected */
+.item .title span {
+    transform: rotate(0deg);
+}
+
+.item .title span.opened {
+    transform: rotate(45deg);
+}
